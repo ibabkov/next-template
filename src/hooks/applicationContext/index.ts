@@ -33,13 +33,15 @@ export const useCreateApplicationContext = (): TApplicationContext => {
 };
 
 export const useModifyApplicationState = <T>(
-  modifier: (params: T) => TApplicationStateModifier
-): ((params: T) => void) => {
+  modifier: (params?: T) => TApplicationStateModifier
+): ((params?: T) => void) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setState] = useApplicationState();
 
   return React.useCallback(
-    (params) => setState(modifier(params)),
+    (params?: T) => {
+      return setState(modifier(params));
+    },
     [setState, modifier]
   );
 };
