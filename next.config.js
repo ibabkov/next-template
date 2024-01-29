@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const withPlugins = require('next-compose-plugins');
-
 const IS_DEV_MODE = process.env.NODE_ENV !== 'production';
 
 /** @type {import('next').NextConfig} */
@@ -24,4 +21,11 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlugins([], nextConfig);
+module.exports = (phase, { defaultConfig }) => {
+  const plugins = [];
+
+  return plugins.reduce((acc, plugin) => plugin(acc), {
+    ...defaultConfig,
+    ...nextConfig,
+  });
+};
