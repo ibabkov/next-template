@@ -8,6 +8,7 @@ function Document() {
   return (
     <Html lang={LANGUAGE}>
       <body>
+        <Head/>
         <Main />
         <NextScript />
       </body>

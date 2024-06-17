@@ -3,7 +3,6 @@ const IS_DEV_MODE = process.env.NODE_ENV !== 'production';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  webpack: true,
   eslint: {
     ignoreDuringBuilds: true,
     dirs: ['pages', 'src'],

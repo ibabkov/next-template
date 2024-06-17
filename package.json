@@ -1,6 +1,6 @@
 {
   "name": "next-template",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "engines": {
     "npm": ">=10.0.0",
@@ -10,33 +10,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:js": "next lint",
-    "lint:css": "stylelint '**/*.css'",
-    "lint": "npm run lint:js && npm run lint:css"
+    "lint": "next lint",
+    "update": "ncu -u"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
-    "lodash": "^4.17.21",
-    "next": "^14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-error-boundary": "^4.0.12"
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^4.0.13"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.202",
-    "@types/node": "^20.11.10",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^14.1.0",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "eslint": "^9.5.0",
+    "eslint-config-next": "^14.2.4",
     "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.0.7",
-    "next-compose-plugins": "^2.2.1",
-    "prettier": "^3.2.4",
-    "stylelint": "^16.2.0",
-    "stylelint-config-standard": "^36.0.0",
-    "typescript": "^5.3.3",
+    "npm-check-updates": "^16.14.20",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5",
     "webpack-glsl-loader": "^1.0.1"
   }
 }
