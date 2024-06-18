@@ -19,15 +19,15 @@ function Application({ Component, pageProps }: AppProps) {
         <StatusPage title={'500'} description={"This page isn't working"} />
       }
     >
-        <Head>
-          <title>{DISPLAY_APP_TITLE}</title>
-          <link rel="icon" href={'/favicon.ico'} />
-          <meta name="description" content={APP_DESCRIPTION} />
-          <meta name="viewport" content={VIEWPORT_SETTINGS} />
-        </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+      <Head>
+        <title>{DISPLAY_APP_TITLE}</title>
+        <link rel="icon" href={'/favicon.ico'} />
+        <meta name="description" content={APP_DESCRIPTION} />
+        <meta name="viewport" content={VIEWPORT_SETTINGS} />
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ErrorBoundary>
   );
 }
