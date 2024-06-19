@@ -7,47 +7,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
-    'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ],
-  root: true,
-  env: {
-    node: true,
-  },
-  ignorePatterns: ['.eslintrc.js'],
-  rules: {
-    '@typescript-eslint/no-explicit-any': 0,
-    semi: ['error', 'always'],
-    'comma-dangle': ['error', 'always-multiline'],
-    'newline-before-return': 'error',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    'import/order': [
-      'error',
-      {
-        'newlines-between': 'always',
-        groups: ['builtin', 'external', 'internal'],
-        pathGroups: [
-          {
-            pattern: 'react',
-            group: 'external',
-            position: 'before',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['react'],
-      },
-    ],
-  },
-};
-module.exports = {
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: 'tsconfig.json',
-    tsconfigRootDir: __dirname,
-    sourceType: 'module',
-  },
-  plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
