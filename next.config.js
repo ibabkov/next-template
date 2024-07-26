@@ -2,29 +2,29 @@ const IS_DEV_MODE = process.env.NODE_ENV !== 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-    dirs: ['pages', 'src'],
-  },
-  publicRuntimeConfig: {
-    IS_DEV_MODE: IS_DEV_MODE,
-  },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.glsl$/,
-      loader: 'webpack-glsl-loader',
-    });
+	reactStrictMode: true,
+	eslint: {
+		ignoreDuringBuilds: true,
+		dirs: ['pages', 'src'],
+	},
+	publicRuntimeConfig: {
+		IS_DEV_MODE: IS_DEV_MODE,
+	},
+	webpack: config => {
+		config.module.rules.push({
+			test: /\.glsl$/,
+			loader: 'webpack-glsl-loader',
+		});
 
-    return config;
-  },
+		return config;
+	},
 };
 
 module.exports = (phase, { defaultConfig }) => {
-  const plugins = [];
+	const plugins = [];
 
-  return plugins.reduce((acc, plugin) => plugin(acc), {
-    ...defaultConfig,
-    ...nextConfig,
-  });
+	return plugins.reduce((acc, plugin) => plugin(acc), {
+		...defaultConfig,
+		...nextConfig,
+	});
 };
