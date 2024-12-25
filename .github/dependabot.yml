@@ -13,7 +13,7 @@ updates:
       major-updates:
         patterns:
           - "*"
-        update-types: ["version-update:semver-major"]
+        update-types: ["major"]
     labels:
       - "dependencies"
       - "major-update"
