@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ApplicationContainer: React.FC = () => {
+export const ApplicationContainer = () => {
 	return (
 		<>
 			<h1>Application</h1>
