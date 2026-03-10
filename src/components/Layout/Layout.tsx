@@ -6,7 +6,7 @@ export interface ILayoutProps {
 	children: React.ReactNode;
 }
 
-export const Layout: React.FC<ILayoutProps> = props => {
+export const Layout = (props: ILayoutProps) => {
 	const { children } = props;
 
 	return <main className={styles['container']}>{children}</main>;

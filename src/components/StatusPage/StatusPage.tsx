@@ -7,13 +7,13 @@ export interface IStatusPageProps {
 	description: string;
 }
 
-export const StatusPage: React.FC<IStatusPageProps> = props => {
+export const StatusPage = (props: IStatusPageProps) => {
 	const { title, description } = props;
 
 	return (
-		<nav className={styles['container']}>
+		<section className={styles['container']}>
 			<span className={styles['title']}>{title}</span>
 			<span className={styles['description']}>{description}</span>
-		</nav>
+		</section>
 	);
 };
