@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+	import '../styles/globals.css';
 import '../styles/theme.css';
 
 import React from 'react';
@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang={LANGUAGE}>
-			<body>
+			<body suppressHydrationWarning>
 				<Layout>{children}</Layout>
 			</body>
 		</html>
